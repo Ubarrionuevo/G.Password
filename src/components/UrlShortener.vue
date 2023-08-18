@@ -19,22 +19,29 @@
       <button @click="copiarContraseña" class="bg-black text-white font-bold py-2 px-4  mt-2 click ">
         Copy
       </button>
-      <p  style="color: green;">Password has been copied!</p>
+    
       <p class="text-white" >{{ contraseñaGenerada }}</p>
-    </div>
+      <p v-if="copied" style="color: green;">Password copied successfully!</p>
      
+    </div>
+   
       
     </div>
 
   </div>
- 
+
+
 </template>
 
 <script>
+ 
 export default {
   data() {
     return {
-      contraseñaGenerada: ''
+      contraseñaGenerada: '',
+      copied: false,
+     
+        
     };
   },
   methods: {
@@ -49,19 +56,20 @@ export default {
       }
 
      this.contraseñaGenerada = contraseña;
+     this.copied = false;
     },
+  
 
     copiarContraseña() {
-      const textarea = document.createElement('textarea');
-      textarea.value = this.contraseñaGenerada;
-      document.body.appendChild(textarea);
+     const textarea = document.createElement('textarea');
+       textarea.value = this.contraseñaGenerada;
+       document.body.appendChild(textarea);
       textarea.select();
-      document.execCommand('copy');
+     document.execCommand('copy');
       document.body.removeChild(textarea);
-      
-    }
-  }
-};
+      this.copied = true;
+   
+      }}}
 </script>
 
 <style>
