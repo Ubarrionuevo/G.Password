@@ -1,4 +1,4 @@
-# nombre-de-tu-proyecto
+# GPassword
 
 ## Project setup
 ```
