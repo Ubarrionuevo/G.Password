@@ -4,6 +4,7 @@
    
     <div class="div-principal"> 
       <div class="mb-6 ">
+      
        
         <a href="https://github.com/Ubarrionuevo/G.Password" target="_blank" class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 custom-link">
           GitHub
@@ -22,7 +23,7 @@
       </button>
     
       <p class="text-white" >{{ contraseñaGenerada }}</p>
-      <p v-if="copied" style="color: green;">Password copied successfully!</p>
+      <h6 v-if="copied" style="color: green;">Password copied successfully!</h6>
      
     </div>
    
@@ -90,8 +91,7 @@ export default {
   
 }
 .custom-link{
-  border: 3px solid gray  ; 
-  border-radius: 50px;
+
   text-decoration: none;
 }
 template{
