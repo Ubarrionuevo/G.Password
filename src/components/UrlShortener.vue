@@ -19,6 +19,7 @@
       <button @click="copiarContraseña" class="bg-black text-white font-bold py-2 px-4  mt-2 click ">
         Copy
       </button>
+      <p  style="color: green;">Password has been copied!</p>
       <p class="text-white" >{{ contraseñaGenerada }}</p>
     </div>
      
