@@ -1,4 +1,4 @@
-# GPassword
+ # GPassword
 
 ## Password generator created through a cryptographic system for better security in the generated keys
 ## Minimalist, concrete and simple design
