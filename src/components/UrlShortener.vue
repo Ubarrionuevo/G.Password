@@ -4,7 +4,7 @@
    
     <div class="div-principal"> 
       <div class="mb-6">
-        <a href="https://github.com/tu-usuario/tu-proyecto" target="_blank" class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 custom-link">
+        <a href="https://github.com/Ubarrionuevo/G.Password" target="_blank" class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 custom-link">
           GitHub
       </a>
       <a href="https://twitter.com/TittoDev_" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 custom-link">
