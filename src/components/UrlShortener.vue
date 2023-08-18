@@ -19,7 +19,7 @@
       <button @click="copiarContraseña" class="bg-black text-white font-bold py-2 px-4  mt-2 click ">
         Copy
       </button>
-      <p class="text-white" v-if="contraseñaGenerada">{{ contraseñaGenerada }}</p>
+      <p class="text-white" >{{ contraseñaGenerada }}</p>
     </div>
      
       
@@ -47,7 +47,7 @@ export default {
         contraseña += caracteres.charAt(randomIndex);
       }
 
-      this.contraseñaGenerada = contraseña;
+     this.contraseñaGenerada = contraseña;
     },
 
     copiarContraseña() {
@@ -64,7 +64,9 @@ export default {
 </script>
 
 <style>
+
 .click{
+  margin-right: 10px;
   border: 1px solid gray;
   border-radius: 30px;
 }
@@ -72,6 +74,7 @@ export default {
   border: 1px solid gray  ; 
   border-radius: 60px;
   padding: 100px;
+  height: 440px; /* Establece una altura fija para el div principal */
   
 }
 .custom-link{
