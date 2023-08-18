@@ -1,5 +1,8 @@
 # GPassword
 
+## Demo
+https://gpassword.netlify.app
+
 ## Project setup
 ```
 npm install
@@ -23,5 +26,4 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-## Demo
-https://gpassword.netlify.app
+
