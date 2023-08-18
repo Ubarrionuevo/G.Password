@@ -12,9 +12,11 @@
     "bootstrap": "^5.3.1",
     "core-js": "^3.8.3",
     "cors": "^2.8.5",
+    "crypto-random-string": "^5.0.0",
     "express": "^4.18.2",
     "firebase": "^10.1.0",
     "mongoose": "^7.4.3",
+    "random-words": "^2.0.0",
     "tailwindcss": "^3.3.3",
     "vue": "^3.2.13",
     "vue-sqlite": "^0.0.0"

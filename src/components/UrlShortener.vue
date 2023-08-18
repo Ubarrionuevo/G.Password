@@ -3,11 +3,12 @@
     <div class="flex flex-col items-center p-8 rounded-lg shadow-md w-80 text-center bg-black run ">
    
     <div class="div-principal"> 
-      <div class="mb-6">
+      <div class="mb-6 ">
+       
         <a href="https://github.com/Ubarrionuevo/G.Password" target="_blank" class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 custom-link">
           GitHub
       </a>
-      <a href="https://twitter.com/TittoDev_" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 custom-link">
+      <a href="https://twitter.com/TittoDev_" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4  ml-4 custom-link">
         Twitter
       </a>
       </div>
@@ -34,7 +35,8 @@
 </template>
 
 <script>
- 
+
+
 export default {
   data() {
     return {
@@ -45,19 +47,20 @@ export default {
     };
   },
   methods: {
-    generarContraseña() {
-      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}|:<>?~-';
-      const longitudMinima = 16;
-      let contraseña = '';
+   
+     generarContraseña() {
+       const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}|:<>?~-';
+       const longitudMinima = 16;
+       let contraseña = '';
 
-      while (contraseña.length < longitudMinima) {
-        const randomIndex = Math.floor(Math.random() * caracteres.length);
-        contraseña += caracteres.charAt(randomIndex);
-      }
+     while (contraseña.length < longitudMinima) {
+         const randomIndex = Math.floor(Math.random() * caracteres.length);
+         contraseña += caracteres.charAt(randomIndex);
+       }
 
-     this.contraseñaGenerada = contraseña;
-     this.copied = false;
-    },
+      this.contraseñaGenerada = contraseña;
+      this.copied = false;
+     },
   
 
     copiarContraseña() {
@@ -87,6 +90,8 @@ export default {
   
 }
 .custom-link{
+  border: 3px solid gray  ; 
+  border-radius: 50px;
   text-decoration: none;
 }
 template{
