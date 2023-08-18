@@ -5,6 +5,7 @@
 ## Demo
 https://gpassword.netlify.app
 
+```
 ## Project setup
 ```
 npm install
