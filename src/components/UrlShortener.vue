@@ -1,6 +1,8 @@
 <template >
   <div class="d-flex align-items-center justify-content-center min-vh-100  bg-black ">
-    <div class="flex flex-col items-center p-8 rounded-lg shadow-md w-80 text-center bg-black w-full ">
+    <div class="flex flex-col items-center p-8 rounded-lg shadow-md w-80 text-center bg-black run ">
+   
+    <div class="div-principal"> 
       <div class="mb-6">
         <a href="https://github.com/tu-usuario/tu-proyecto" target="_blank" class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 custom-link">
           GitHub
@@ -9,16 +11,17 @@
         Twitter
       </a>
       </div>
-    
-      <h2 class="text-xl font-semibold mb-4 text-white ">GPassword</h2>
+      <h2 class="text-xl font-semibold mb-4 text-white mt-5">GPassword</h2>
       <p class="text-white">Random Password Generator</p>
-      <button @click="generarContraseña" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 bg-black">
+      <button @click="generarContraseña" class=" text-white font-bold py-2 px-4  mb-4 bg-black click">
        Generator
       </button>
-      <button @click="copiarContraseña" class="bg-black hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-2">
+      <button @click="copiarContraseña" class="bg-black text-white font-bold py-2 px-4  mt-2 click ">
         Copy
       </button>
       <p class="text-white" v-if="contraseñaGenerada">{{ contraseñaGenerada }}</p>
+    </div>
+     
       
     </div>
 
@@ -61,6 +64,16 @@ export default {
 </script>
 
 <style>
+.click{
+  border: 1px solid gray;
+  border-radius: 30px;
+}
+.div-principal{
+  border: 1px solid gray  ; 
+  border-radius: 60px;
+  padding: 100px;
+  
+}
 .custom-link{
   text-decoration: none;
 }
