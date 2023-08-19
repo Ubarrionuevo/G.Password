@@ -1,3 +1,4 @@
+
 <template>
   <div class="d-flex align-items-center justify-content-center min-vh-100 bg-black">
     <div class="flex flex-col items-center p-8 rounded-lg shadow-md w-80 text-center bg-black run">
@@ -18,8 +19,8 @@
         <button @click="copiarContraseña" class="bg-black text-white font-bold py-2 px-4 click">
           Copy
         </button>
-        <p class="text-white">{{ contraseñaGenerada }}</p>
-        <h6 v-if="copied" style="color: green;">Password copied successfully!</h6>
+        <p class="contraseñascreadas text-white">{{ contraseñaGenerada }}</p>
+        <h6  class="confirmation-text" v-if="copied" style="color: green;">Password copied successfully!</h6>
       </div>
     </div>
   </div>
@@ -79,7 +80,23 @@ export default {
     padding: 20px;
     height: auto;
   }
+
+    
 }
+
+.confirmation-text {
+    position: absolute;
+    bottom: 150px; /* Ajusta según tus necesidades */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .contraseñascreadas{
+    position: absolute;
+    bottom: 200px; /* Ajusta según tus necesidades */
+    left: 50%;
+    transform: translateX(-50%);
+  }
 .click{
   margin-right: 10px;
   border: 1px solid gray;
