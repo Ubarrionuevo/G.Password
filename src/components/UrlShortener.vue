@@ -1,57 +1,29 @@
 <template>
   <div class="d-flex align-items-center justify-content-center min-vh-100 bg-black">
-    <div class="flex flex-col items-center p-4 rounded-lg shadow-md w-90 text-center bg-black run">
-      <div class="mb-4">
-        <a href="https://github.com/Ubarrionuevo/G.Password" target="_blank" class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 custom-link">
-          GitHub
-        </a>
-        <a href="https://twitter.com/TittoDev_" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 ml-4 custom-link">
-          Twitter
-        </a>
+    <div class="flex flex-col items-center p-8 rounded-lg shadow-md w-80 text-center bg-black run">
+      <div class="div-principal">
+        <div class="mb-6">
+          <a href="https://github.com/Ubarrionuevo/G.Password" target="_blank" class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 custom-link">
+            GitHub
+          </a>
+          <a href="https://twitter.com/TittoDev_" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 ml-4 custom-link">
+            Twitter
+          </a>
+        </div>
+        <h2 class="text-xl font-semibold mb-4 text-white mt-5">GPassword</h2>
+        <p class="text-white">Random Password Generator</p>
+        <button @click="generarContraseña" class="text-white font-bold py-2 px-4 mb-2 bg-black click">
+          Generator
+        </button>
+        <button @click="copiarContraseña" class="bg-black text-white font-bold py-2 px-4 click">
+          Copy
+        </button>
+        <p class="text-white">{{ contraseñaGenerada }}</p>
+        <h6 v-if="copied" style="color: green;">Password copied successfully!</h6>
       </div>
-      <h2 class="text-xl font-semibold mb-2 text-white mt-5">GPassword</h2>
-      <p class="text-white">Random Password Generator</p>
-      <button @click="generarContraseña" class="text-white font-bold py-2 px-4 mb-2 bg-black click">
-        Generator
-      </button>
-      <button @click="copiarContraseña" class="bg-black text-white font-bold py-2 px-4 click">
-        Copy
-      </button>
-      <p class="text-white">{{ contraseñaGenerada }}</p>
-      <h6 v-if="copied" style="color: green;">Password copied successfully!</h6>
     </div>
   </div>
 </template>
-<!-- 
-<template>
-  <div class="d-flex align-items-center justify-content-center min-vh-100 bg-black">
-    <div class="flex flex-col items-center p-4 rounded-lg shadow-md w-90 text-center bg-black run">
-      <div class="mb-4">
-        <a href="https://github.com/Ubarrionuevo/G.Password" target="_blank" class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 custom-link">
-          GitHub
-        </a>
-        <a href="https://twitter.com/TittoDev_" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 ml-4 custom-link">
-          Twitter
-        </a>
-      </div>
-      <h2 class="text-xl font-semibold mb-2 text-white mt-5">GPassword</h2>
-      <p class="text-white">Random Password Generator</p>
-      <button @click="generarContraseña" class="text-white font-bold py-2 px-4 mb-2 bg-black click">
-        Generator
-      </button>
-      <button @click="copiarContraseña" class="bg-black text-white font-bold py-2 px-4 click">
-        Copy
-      </button>
-      <p class="text-white">{{ contraseñaGenerada }}</p>
-      <h6 v-if="copied" style="color: green;">Password copied successfully!</h6>
-    </div>
-  </div>
-</template> -->
-
-<!-- Resto del código -->
-
-
-
 
 <script>
 import cryptoRandomString from 'crypto-random-string';
@@ -74,7 +46,19 @@ export default {
     this.contraseñaGenerada = contraseña;
     this.copied = false;
   },
-    
+    //  generarContraseña() {
+    //    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}|:<>?~-';
+    //    const longitudMinima = 16;
+    //    let contraseña = '';
+
+    //  while (contraseña.length < longitudMinima) {
+    //      const randomIndex = Math.floor(Math.random() * caracteres.length);
+    //      contraseña += caracteres.charAt(randomIndex);
+    //    }
+
+    //   this.contraseñaGenerada = contraseña;
+    //  
+    //  },
   
 
     copiarContraseña() {
@@ -90,7 +74,12 @@ export default {
 </script>
 
 <style>
-
+@media screen and (max-width: 768px) {
+  .div-principal {
+    padding: 20px;
+    height: auto;
+  }
+}
 .click{
   margin-right: 10px;
   border: 1px solid gray;
