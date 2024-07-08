@@ -4,11 +4,11 @@
 ### Minimalist, concrete and simple design
 ## Demo
 https://gpassword.netlify.app
-```
+------
+![Generator](/img/passww.png)
 
 
 
-```
 ## Project setup
 ```
 npm install
