@@ -4,6 +4,9 @@
 ### Minimalist, concrete and simple design
 ## Demo
 https://gpassword.netlify.app
+```
+![Clientes](/img/)
+
 
 ```
 ## Project setup
