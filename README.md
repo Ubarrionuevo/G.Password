@@ -5,7 +5,7 @@
 ## Demo
 https://gpassword.netlify.app
 ```
-!(/img/passww.png)
+
 
 
 ```
